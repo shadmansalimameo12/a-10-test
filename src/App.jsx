@@ -1,13 +1,13 @@
-
 import './App.css'
+import { RouterProvider } from 'react-router-dom'
+import AuthProvider from './contexts/AuthContext'
 
-function App() {
- 
-
+// Note: The actual routing is handled in main.jsx
+function App({ router }) {
   return (
-    <>
-      <h1>Welcome to React</h1>
-    </>
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   )
 }
 
