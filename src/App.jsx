@@ -1,12 +1,13 @@
 import './App.css'
+import { AuthProvider } from './Contexts/AuthContext'
+import { Toaster } from 'react-hot-toast'
 
-function App() {
- 
-
+function App({ children }) {
   return (
-    <>
-      <h1>Welcome to React</h1>
-    </>
+    <AuthProvider>
+      {children}
+      <Toaster position="top-center" reverseOrder={false} />
+    </AuthProvider>
   )
 }
 
