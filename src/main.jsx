@@ -7,7 +7,9 @@ import {
   RouterProvider,
 } from "react-router";
 import MainLayout from './Layouts/MainLayout.jsx';
-import Home from './Components/Home.jsx';
+
+import { Component } from 'react';
+import Home from './Pages/Home.jsx';
 
 
 
@@ -18,7 +20,8 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        Component: Home
+        Component: Home,
+      
       }
     ]
   },
