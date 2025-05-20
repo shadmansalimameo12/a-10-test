@@ -1,10 +1,9 @@
-import { Link } from 'react-router';
-
+import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { useAuth } from '../Contexts/AuthContext';
 
 const Navbar = () => {
-    const { user, logOut } = useAuth()
+    const { user, logOut } = useAuth();
 
     const handleLogout = () => {
         logOut()
